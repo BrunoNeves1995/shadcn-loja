@@ -17,23 +17,27 @@ export const metadata: Metadata = {
     title: "Loja Shadcn UI"
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
+export default function RootLayout({ children, }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >{children}</ThemeProvider>
-            </body>
-        </html>
+        <>
+            <html lang="pt-BR" suppressHydrationWarning>
+                <head />
+                <body
+                    className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                >
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="system"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        {children}
+                    </ThemeProvider>
+                </body>
+            </html>
+        </>
+
     );
 }
