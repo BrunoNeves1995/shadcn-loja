@@ -1,3 +1,4 @@
+'use client'
 export const Logo = () => {
     return (
         <div className="text-xl">
